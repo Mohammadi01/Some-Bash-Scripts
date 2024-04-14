@@ -4,8 +4,8 @@
 read -p "enter the string: " string
 
 # Use grep with a regular expression to extract numbers
-numbers=$(echo "$string" | grep -oE '[0-9]+')
-
+#numbers=$(echo "$string" | grep -oE '[0-9]+')
+numbers=$(echo "$string" | tr -cd '[:digit:]')
 
 
 reversed=""
